@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/doctorRegistration.css" />
+		<title>register</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box">
+				<form action="php/register.php" method="post" enctype="multipart/form-data">
+					<h3>Register</h3>
+					<input type="text" value="" name="firstName" id="firstName" placeholder="first name"/>
+					<input type="text" name="lastName" id="lastName" value="" placeholder="last name">
+					<input class="email" type="email" name="email" id="email" placeholder="Email">
+					<input class="pass" type="password" name="password" id="password" placeholder="Password">
+					<input type="password" name="confirmPassword" id="confirmPassword" value="" placeholder="confirm password">
+				<input id="submit" name="submit" type="submit" value="Register">	
+				</form>
+				<div class="new-doctor">
+					<p>Already a member ?</p>
+<button><a href="login.html">Login</a></button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

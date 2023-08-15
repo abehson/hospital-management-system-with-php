@@ -1,0 +1,189 @@
+:root{
+	--white : #ffffff;
+	--light_gray : #f8f8fa;
+	--light_blue : #3b82f6;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+nav ul{
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	padding: 0 0 0 1px;
+}
+
+nav{
+	box-shadow: 0 2px 2px 4px rgba(0,0,0,0.02);
+}
+
+li{
+	list-style-type: none;
+}
+
+ul>div{
+	padding: 15px;
+}
+
+a{
+	color: #000;
+	padding-top: 25px;	
+	text-decoration: none;
+}
+
+.fa{
+	font-size: 21px;
+	padding-bottom: 8px;
+}
+
+.nav-item{
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.container{
+	background-color: var(--light_gray);
+	display: grid;
+	height:900px;
+}
+
+.wrapper form{
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	height:480px;
+	top: -24%;
+}
+
+form .left-pane,
+form .right-pane{
+	position: relative;
+	background-color: var(--white);
+}
+form .left-pane{
+	width: 120%;
+	margin-left: 12px;
+}
+
+form .right-pane{
+	right: -36%;
+	width: 62%;
+	margin-right: 12px;
+}
+
+.personal-details{
+	display: flex;
+	flex-wrap: wrap;	
+	justify-content: space-between;
+}
+
+.more-details{
+	display: flex;
+	flex-direction: column;
+}
+
+.personal-details .input-box{
+	margin: 10px 10px;
+	width: calc(100% / 2 - 20px);
+}
+
+input:not(.input-container>input), select{
+	padding: 10px;
+	height: 45px;
+	width: 100%;
+	background-color: var(--light_gray);
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+label{
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+h2{
+	color: red;
+	padding: 10px 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.right-pane #image-container{
+	width: 130px;
+	height: 130px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	margin-left: 10px;  
+	border: 1px solid var(--light_blue);
+}
+
+/* Style the profile picture */
+#preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Style the "Choose File" label */
+#choose-file-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: transparent; */
+  cursor: pointer;
+}
+
+/* Hide the "Choose File" input initially */
+.hidden {
+  display: none;
+}
+
+/* More Information */
+
+.more-info-box{
+	margin: 8px 8px;
+}
+
+.input-container{
+	display: flex;
+	justify-content:flex-end;
+}
+
+.submit{
+	padding: 2px 18px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	background-color: var(--light_blue);
+	color: var(--white);
+	margin-bottom: 15px;
+	cursor:pointer;
+}
+
+.error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+.error.active {
+            display: block;
+        }
+.error-field {
+            border: 1px solid red;
+        }
+
+.invalid-input {
+      border: 1px solid red;
+}

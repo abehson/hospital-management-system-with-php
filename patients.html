@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/patientss.css" />
+		<link
+			rel="stylesheet"
+			href="fontawesome-free-6.2.0-web/fontawesome/css/all.min.css"
+			title=""
+			type=""
+		/>
+		<title>upload</title>
+		<body>
+			<main class="container">
+				<div class="nav">
+					<nav class="nav-bar">
+						<ul class="nav-menu">
+							<div class="nav-item">
+								<i class="fa fa-solid fa-circle-user"></i>
+								<li><a href="index.html">New Patient</a></li>
+							</div>
+							<div class="nav-item">
+								<i class="fa fa-solid fa-magnifying-glass"></i>
+								<li class="">
+									<a href="patients.html">Find Patient</a>
+								</li>
+							</div>
+							<div class="nav-item">
+								<i class="fa fa-solid fa-flask"></i>
+								<li>
+									<a href="patient-connnection.html"
+										>Patient Connection</a
+									>
+								</li>
+							</div>
+							<div class="nav-item">
+								<i class="fa fa-solid fa-heart"></i>
+								<li><a>Medication</a></li>
+							</div>
+						</ul>
+					</nav>
+				</div>
+				<section class="table-wrapper">
+					<h2>Patients Table</h2>
+					<div class="table">
+						<table>
+							<thead>
+								<tr align="left">
+									<th class="patient-id">Patient ID</th>
+									<th class="patient-age">Age</th>
+									<th class="patient-name">Name</th>
+									<th class="patient-department">Department</th>
+								</tr>
+							</thead>
+							<tbody id="form-details-container"></tbody>
+						</table>
+						</div>
+				</section>
+			</main>
+
+			<script>
+				fetch("./php/patientsData.php")
+					.then((response) => response.json())
+					.then((data) => {
+						const formDetailsContainer = document.getElementById(
+							"form-details-container"
+						);
+						data.forEach((item) => {
+							const row = document.createElement("tr");
+							row.innerHTML = `<td>${item.id}</td><td>${item.age}</td><td>${item.firstName + " "+ item.lastName}</td><td>${item.detail}</td>`;
+							formDetailsContainer.appendChild(row);
+						});
+					})
+					.catch((error) =>
+						console.error("Error fetching data: ", error)
+					);
+			</script>
+		</body>
+	</head>
+</html>
