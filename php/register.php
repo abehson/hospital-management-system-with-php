@@ -22,7 +22,7 @@ $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $email, $hashedPassword);
 
 if (mysqli_stmt_execute($stmt)) {
-	require 'dashboard.php';
+	require 'registrationSuccess.php';
 } else {
     echo "Error: " . mysqli_error($conn);
 }

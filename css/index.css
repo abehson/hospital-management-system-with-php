@@ -1,52 +1,4 @@
-:root{
-	--white : #ffffff;
-	--light_gray : #f8f8fa;
-	--light_blue : #3b82f6;
-}
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-nav ul{
-	background-color: var(--white);
-	display: flex;
-	align-items: center;
-	padding: 0 0 0 1px;
-}
-
-nav{
-	box-shadow: 0 2px 2px 4px rgba(0,0,0,0.02);
-}
-
-li{
-	list-style-type: none;
-}
-
-ul>div{
-	padding: 15px;
-}
-
-a{
-	color: #000;
-	padding-top: 25px;	
-	text-decoration: none;
-}
-
-.fa{
-	font-size: 21px;
-	padding-bottom: 8px;
-}
-
-.nav-item{
-	display: flex;
-	align-items:center;
-	justify-content: center;
-	flex-direction: column;
-}
+@import url("navbar.css");
 
 .container{
 	background-color: var(--light_gray);
@@ -126,13 +78,11 @@ h2{
 	border: 1px solid var(--light_blue);
 }
 
-/* Style the profile picture */
 #preview {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* Style the "Choose File" label */
 #choose-file-label {
   display: block;
   width: 100%;
@@ -140,11 +90,9 @@ h2{
   position: absolute;
   top: 0;
   left: 0;
-  /* background-color: transparent; */
   cursor: pointer;
 }
 
-/* Hide the "Choose File" input initially */
 .hidden {
   display: none;
 }

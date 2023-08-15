@@ -1,5 +1,4 @@
 
-// JavaScript to handle interactions
 document.addEventListener("DOMContentLoaded", function () {
 	var profilePictureContainer = document.getElementById("image-container");
 	var profilePicture = document.getElementById("preview");
